@@ -68,7 +68,7 @@ def download_image(url, save_path):
 
 # Example usage
 url = "https://genius.com/Joji-die-for-you-lyrics"  # Replace with the desired URL
-chromedriver_path = '/home/sohlost/Projects/beatprints_engine/chromedriver-linux64/chromedriver'  # Replace with your ChromeDriver path
+chromedriver_path = '/home/sohlost/Projects/beatprints_engine/scrapper/chromedriver-linux64/chromedriver'  # Replace with your ChromeDriver path
 html_content = get_rendered_html(url, chromedriver_path)
 
 
@@ -82,7 +82,7 @@ releasedate = soup.find('span', class_='LabelWithIcon__Label-hjli77-1 hgsvkF').t
 image = soup.find('img')
 image_url = image['src']
 
-save_directory = "/home/sohlost/Projects/beatprints_engine/pictures"  # Change this to your desired directory
+save_directory = "/home/sohlost/Projects/beatprints_engine/scrapper/pictures"  # Change this to your desired directory
 
 download_image(image_url, save_directory)
 
